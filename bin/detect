@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+BUILD_DIR=$1
+
+#if [ -f $BUILD_DIR/server.R ] && [ -f $BUILD_DIR/ui.R ]; then
+if [ -f $BUILD_DIR/init.R ]; then
+BUILD_DIR=$1
+  echo 'Shiny'
+else
+  exit 1
+fi
